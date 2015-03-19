@@ -9,7 +9,7 @@ dataUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 dataDir <- "data"
 destArchive <- paste(dataDir, "/incoming.zip", sep="")
 destUnzipFolder <- paste(dataDir, "/incoming", sep="")
-outputTable <- paste(dataDir, "/output.table", sep="")
+outputTable <- paste(dataDir, "/output.txt", sep="")
 
 # common file names
 file_act_labels <- paste(destUnzipFolder, "/UCI HAR Dataset/activity_labels.txt", sep="")

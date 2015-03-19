@@ -44,5 +44,5 @@ Scripts performs actions according to next algorithm:
 5. Read test dataset, merge with subject and action columns and provide corect names.
 6. Combine datasets from item 4 and 5 using rowbind to obtain resulting dataset.
 7. Calculate mean for all features variables from dataset by each subject and action. 
-8. Save the result from item 8 into output dataset named "resultData" and write to file (by default - "data/output.table").
+8. Save the result from item 8 into output dataset named "resultData" and write to file (by default - "data/output.txt").
 
