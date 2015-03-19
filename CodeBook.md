@@ -16,12 +16,12 @@ So for example if you need to address to variable "tBodyAcc-mean()-X" from origi
 
 1.   subject - An identifier of the subject who carried out the experiment; range - 1:30
 2.   activity -  An activity label; possile values:
-        WALKING
-        WALKING_UPSTAIRS
-        WALKING_DOWNSTAIRS
-        SITTING
-        STANDING
-        LAYING
+       - WALKING
+       - WALKING_UPSTAIRS
+       - WALKING_DOWNSTAIRS
+       - SITTING
+       - STANDING
+       - LAYING
 3.	MEAN.tBodyAcc.mean.X - mean by subject and activity of corresponding feature variable
 4.	MEAN.tBodyAcc.mean.Y - mean by subject and activity of corresponding feature variable
 5.	MEAN.tBodyAcc.mean.Z - mean by subject and activity of corresponding feature variable

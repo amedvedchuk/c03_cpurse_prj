@@ -25,7 +25,7 @@ To run analysis script do the following steps:
 1. set working directory in place where run_analysis.R is located
 2. run following command in R console
 ```{r}
-    source("run_analysis.R")
+source("run_analysis.R")
 ```
 3. After run variable "resultData" will contains resultind data set. Also data set will be written to file defined in "outputTable" variable (function write.table() is used with row.name=FALSE)
 
