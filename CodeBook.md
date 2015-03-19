@@ -7,9 +7,11 @@ Variables with prefix "MEAN." was calculated as mean() by each subject and activ
 * "data/incoming/UCI HAR Dataset/train/X_train.txt"
 * "data/incoming/UCI HAR Dataset/test/X_test.txt"
 
-The meaning of underlying feature variables described in detail in file "data/incoming/UCI HAR Dataset/features_info.txt" and "data/incoming/UCI HAR Dataset/features.txt".
+The meaning of underlying feature variables described in detail in files: 
+* "data/incoming/UCI HAR Dataset/features_info.txt" 
+* "data/incoming/UCI HAR Dataset/features.txt".
 
-Please note that brackets ("()") was removed from variable names and dashes ("-") was replaced by dot ("."). 
+**bold**Please note!**bold** Brackets ("()") was removed from original variable names and dashes ("-") was replaced by dot ("."). 
 So for example if you need to address to variable "tBodyAcc-mean()-X" from original data you should use variable "MEAN.tBodyAcc.mean.X" from this codebook and so on.
 
 # Output variable list
