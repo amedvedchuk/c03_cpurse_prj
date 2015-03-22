@@ -26,7 +26,11 @@ downloadRawData <- function(){
     if(!file.exists(dataDir)){
         print(paste("download data from:", dataUrl))
         dir.create(dataDir)
-        download.file(dataUrl, destArchive, method = "wget")
+        if(.Platform$OS.type == "windows"){
+            download.file(dataUrl, destArchive)
+        } else {
+            download.file(dataUrl, destArchive, method = "wget")
+        }
         print(paste("unzip files to:", destUnzipFolder))
         unzip(zipfile = destArchive, exdir = destUnzipFolder)
     } else {
@@ -109,9 +113,10 @@ prepareTidyData <- function(){
     
     resultData <- ddply(tidyData, .variables = .(subject, activity), colwise(mean))
     #make names human readable
-    data_names <- gsub("\\.\\.\\.", ".", names(resultData))
-    data_names <- gsub("\\.\\.", "", data_names)
-    data_names[-(1:2)] <- paste("MEAN.",data_names[-(1:2)], sep="")
+    #data_names <- gsub("\\.\\.\\.", ".", names(resultData))
+    #data_names <- gsub("\\.\\.", "", data_names)
+    data_names <- gsub("\\.", "", names(resultData))
+    data_names[-(1:2)] <- paste("MEAN",data_names[-(1:2)], sep="")
     names(resultData) <- data_names
     
     write.table(resultData, file = outputTable, row.name=FALSE)
